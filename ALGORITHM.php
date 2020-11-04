@@ -41,7 +41,7 @@
 						]
 					2. pemrosesan data hijack
 						[
-					
+							2.1 
 						]
 				
 				{ /*NOTE*/
