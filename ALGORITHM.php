@@ -36,6 +36,7 @@
 					1. tampilan Daftar Briva(mahasiswa yang sudah membyaar di briva)
 						[
 							1.1 sort by tanggal 1 hari
+							1.2 sorting mahasiswa yang aktif dan sudah membayar di briva
 							
 						]
 				
