@@ -56,7 +56,7 @@
 			2.Pilih bank pembayaran (Penggkondisian table bank)
 				BANK JATENG[
 						1.langsung melakukan pembayaran Pihak Bank Jateng , maka otomatis 'status' akan berubah
-							]
+						]
 				BANK BRI
 					[
 						1.pilih biaya pembyaran
