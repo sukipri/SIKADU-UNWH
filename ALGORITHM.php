@@ -37,8 +37,9 @@
 						[
 							1.1 sort by tanggal 1 hari
 							1.2 sorting mahasiswa yang aktif dan sudah membayar di briva
-							
+							1.3 Update data(biaya_02_rekam_bri)
 						]
+					
 					2. pemrosesan data hijack(global Update)
 						[
 							2.1 tampilkan data mahasiswa
@@ -47,10 +48,10 @@
 									2.1.B 
 								]
 								
-							2.3 
+							2.2 
 						]
 				
-				{ /*NOTE*/
+				{ /*NOTE APP Keuangan*/
 					/* TASK TARGET */
 						Update hijack UTS UAS mahasiswa yang sudah bayar
 						BEBERAPA TAGIHAN DI KELAS REG/EKS BLM OK
