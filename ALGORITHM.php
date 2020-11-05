@@ -44,8 +44,8 @@
 						[
 							2.1 tampilkan data mahasiswa
 								[
-									2.1.A IF TAGIHAN = 0(biaya_02_rekam_bri)
-									2.1.B IF status mahasiswa(mahasiswa) = 2(aktif)
+									2.1.A IF status mahasiswa(mahasiswa) = 2(aktif) 
+									2.1.B IF TAGIHAN = 0(biaya_02_rekam_bri) berdasarkan semester aktif
 								]
 								
 							2.2 
