@@ -45,7 +45,7 @@
 							2.1 tampilkan data mahasiswa
 								[
 									2.1.A IF status mahasiswa(mahasiswa) = 2(aktif) 
-									2.1.B IF TAGIHAN = 0(biaya_02_rekam_bri) berdasarkan semester aktif
+									2.1.B IF TAGIHAN = 0 [app=2] (biaya_02_rekam_bri) berdasarkan semester aktif next status UTS = 2
 								]
 								
 							2.2 
