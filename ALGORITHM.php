@@ -39,7 +39,7 @@
 							1.2 sorting mahasiswa yang aktif dan sudah membayar di briva
 							
 						]
-					2. pemrosesan data hijack
+					2. pemrosesan data hijack(global Update)
 						[
 							2.1 
 						]
