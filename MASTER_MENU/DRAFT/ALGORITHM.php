@@ -36,10 +36,22 @@
 					1. tampilan Daftar Briva(mahasiswa yang sudah membyaar di briva)
 						[
 							1.1 sort by tanggal 1 hari
-							
+							1.2 sorting mahasiswa yang aktif dan sudah membayar di briva
+							1.3 Update data(biaya_02_rekam_bri)
+						]
+					
+					2. pemrosesan data hijack(global Update)
+						[
+							2.1 tampilkan data mahasiswa
+								[
+									2.1.A IF status mahasiswa(mahasiswa) = 2(aktif) 
+									2.1.B IF TAGIHAN = 0 [app=2] (biaya_02_rekam_bri) berdasarkan semester aktif next status UTS = 2
+								]
+								
+							2.2 
 						]
 				
-				{ /*NOTE*/
+				{ /*NOTE APP Keuangan*/
 					/* TASK TARGET */
 						Update hijack UTS UAS mahasiswa yang sudah bayar
 						BEBERAPA TAGIHAN DI KELAS REG/EKS BLM OK
@@ -56,7 +68,7 @@
 			2.Pilih bank pembayaran (Penggkondisian table bank)
 				BANK JATENG[
 						1.langsung melakukan pembayaran Pihak Bank Jateng , maka otomatis 'status' akan berubah
-							]
+						]
 				BANK BRI
 					[
 						1.pilih biaya pembyaran
@@ -89,4 +101,3 @@
 		
 					
 	
-	?>
