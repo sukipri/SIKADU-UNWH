@@ -51,9 +51,11 @@
 													Issue
 														 jika row kosong makan tetap dianggap tidak ada tagihan
 												*/
+													
 										2.1.B  IF [APP = 2 SUM(total Row) == SUM(APP = 2 SUM(total from Server side:PHP) [OPT 3]
 														[
 															/*Penjabaran linear Break*/
+																Fetching data field(rows)
 																IF field[APP]= '2' 
 																SUM field[APP] == rows table record 
 																IF ROWS field[APP]='2' SUM([APP])
