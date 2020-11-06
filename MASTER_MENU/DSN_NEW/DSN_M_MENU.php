@@ -1,0 +1,3 @@
+<a href="<?php echo"?&SUB=DSN_M_SKS&IDDSN=$IDDSN&kddsn=$IDDSN#GET_DATA"; ?>" class="btn btn-outline-success btn-lg"><i class="fa fa-text-height"></i>&nbsp;Entri SKS</a>&nbsp;
+		  	<a href="<?php echo"?&SUB=DSN_M_WALI&IDDSN=$IDDSN&kddsn=$IDDSN#GET_DATA"; ?>" class="btn btn-outline-danger btn-lg"><i class="fa fa-street-view"></i>&nbsp;Perwalian</a> &nbsp;
+		<a href="<?php echo"?&SUB=DSN_M_AMPU&IDDSN=$IDDSN&kddsn=$IDDSN#GET_DATA"; ?>" class="btn btn-outline-warning btn-lg"><i class="fa fa-clipboard"></i>&nbsp;Ampuan SKS</a>
