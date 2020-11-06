@@ -45,8 +45,8 @@
 							2.1 tampilkan data mahasiswa
 								[
 									2.1.A IF status mahasiswa(mahasiswa) = 2(aktif) 
-									2.1.B IF TAGIHAN = 0 [app=2] (biaya_02_rekam_bri) berdasarkan semester aktif next status UTS = 2 [OPT 1]
-									2.1.B IF TAGIHAN = 0 [app=1 OR APP app=3] (biaya_02_rekam_bri) berdasarkan semester aktif next status UTS = 2 [OPT 2]
+									2.1.B IF TAGIHAN  [app=2] (biaya_02_rekam_bri) berdasarkan semester aktif next status UTS = 2 [OPT 1]
+									2.1.B IF TAGIHAN [app=1 OR APP app=3] (biaya_02_rekam_bri) berdasarkan semester aktif next status UTS = 2 [OPT 2]
 												/*
 													Issue
 														 jika row kosong makan tetap dianggap tidak ada tagihan
