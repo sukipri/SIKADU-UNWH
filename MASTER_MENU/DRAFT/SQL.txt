@@ -1,0 +1,28 @@
+/*..*/
+select  * from bjaka.tahun_ajaran
+select * from bjaka.gelombang
+select * from bjaka.user_bu
+/*User admin*/
+	select * from bjaka.user_mhs where idmahasiswa ='171010001'
+/*MAHASISWA*/
+select * from bjaka.mahasiswa where idtahun_ajaran='17' and idmahasiswa='171010001' order by idtahun_ajaran desc limit 50
+select * from bjaka.mahasiswa where idtahun_ajaran='17'  order by idtahun_ajaran desc limit 50
+
+
+/* Keuangan */ 
+select * from bjaka.biaya_02 where THN='117' limit 10
+select * from bjaka.biaya_02_rekam_bri
+	describe bjaka.biaya_02_rekam_bri
+	/* truncate table bjaka.biaya_02_rekam_bri */
+	/* DELETE FROM bjaka.biaya_02_rekam_bri WHERE idmahasiswa='171010001' */
+select * from bjaka.biaya_02_rekam
+select  * from bjaka.tb_jenis_tagihan
+select  * from bjaka.tb_tagihan_01
+select  * from bjaka.tb_tagihan_01_rec
+select  * from bjaka.tb_tagihan_01_rec
+	select  * from bjaka.tb_tagihan_01_rec where status='3'
+	describe bjaka.tb_tagihan_01_rec
+	/* truncate table bjaka.tb_tagihan_01_rec */
+select  * from bjaka.tb_tagihan_01_temp
+	describe bjaka.tb_tagihan_01_temp
+	/* truncate table bjaka.tb_tagihan_01_temp */
