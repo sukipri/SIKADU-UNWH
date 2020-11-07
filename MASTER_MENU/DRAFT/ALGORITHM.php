@@ -7,7 +7,7 @@
 
 	<?php
 		/*Keuangan*/
-			// Export tagihan mahasiswa //
+			// Export tagihan mahasiswa per angakatan //
 				1.pilih jenis tagihan
 				2.Pilih angkatan
 				3.menampilkan list mahasiswa sesuai angkatan
@@ -31,6 +31,10 @@
 					]
 				5.Entri nominal tagihan
 				6.Data tersimpan / Terunggah
+				
+				// Export tagihan mahasiswa semi global //
+					
+					
 				
 				//update BRIVA & HIJACK UAS UTS mahasiswa 
 					1. tampilan Daftar Briva(mahasiswa yang sudah membyaar di briva)
