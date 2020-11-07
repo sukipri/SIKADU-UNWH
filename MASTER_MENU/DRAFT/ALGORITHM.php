@@ -33,6 +33,15 @@
 				6.Data tersimpan / Terunggah
 				
 				// Export tagihan mahasiswa semi global //
+					1. form prosedure tagihan global
+						[
+						 	1.1 CHOOSE jenis tagihan(tb_jenis_tagihan)
+							1.2 fetching datta mahasiswa global
+							1.3 rendering tagihan 
+								[
+									1.3.A 
+								]
+						]
 					
 					
 				
