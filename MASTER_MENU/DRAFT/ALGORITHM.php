@@ -21,7 +21,7 @@
 							[
 								4.2.1.A	pengkodisian berdasarkan UTS dan UAS 
 										[
-											4.2.1.A.1		
+											4.2.1.A.
 										]
 							]
 							[
@@ -39,7 +39,10 @@
 							1.2 fetching datta mahasiswa global
 							1.3 rendering tagihan 
 								[
-									1.3.A 
+									1.3.A fetching (tb_tagihan_01)
+									1.3.B GET data sort by (jenis tagihan,gelombang,kode,kelas) FROM (mahasiswa|Golbal)
+									1.3.C 
+									
 								]
 						]
 					
