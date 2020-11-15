@@ -25,7 +25,7 @@
             <td>
             <a href="<?PHP echo"?HLM=BU_MST_M&SUB=BU_MST_M_DT_TGH_M&SUB_CHILD=BU_MST_M_DT_TGH_M_03_01&IDKEJ01=$vkjj_sww[idkejuruan]"; ?>" class="badge badge-success"><i class="fas fa-file-download"></i>&nbsp;Model Export</a>
             &nbsp;
-            <a href="#" class="badge badge-info"><i class="fas fa-clipboard"></i>&nbsp;Data Export</a>
+            <a href="<?php echo"?HLM=BU_MST_M&SUB=BU_MST_M_DT_TGH_M&SUB_CHILD=BU_MST_M_DT_TGH_M_03_01_GL&IDKEJ01=$vkjj_sww[idkejuruan]"; ?>" class="badge badge-info"><i class="fas fa-clipboard"></i>&nbsp;Export Global</a>
             </td>
             <td>&nbsp;</td>
           </tr>
