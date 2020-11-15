@@ -1,6 +1,8 @@
 <head>  
 	<!-- css Local -->
+	
 	<link href="../sd/bot_simplex.css" rel="stylesheet" type="text/css" />
+	<!-- <link href="../sd/bot_simplex.css" rel="stylesheet" type="text/css" /> -->
 	<link href="../sd/LOAD_BODY.css" rel="stylesheet" type="text/css" />
 
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600italic,700italic' rel='stylesheet' type='text/css'>

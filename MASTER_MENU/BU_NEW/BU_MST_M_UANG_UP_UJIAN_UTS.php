@@ -25,11 +25,11 @@
               <?php 
 			  	$unw_uts_no = 1;
 				//MAHASISWA
-					$unw_vmhs01_sw = $call_q("$sl idmahasiswa,idkejuruan,idsemester,nama,idtahun_ajaran,idsemester  FROM mahasiswa2 WHERE idkejuruan='$IDKEJ01' AND idtahun_ajaran='$IDAJR01' AND mhs='2' AND krs='2' AND idsemester='$vsmm_up[idsemester]' order by idmahasiswa asc ");
+					$unw_vmhs01_sw = $call_q("$sl idmahasiswa,idkejuruan,idsemester,nama,idtahun_ajaran,idsemester  FROM mahasiswa2 WHERE  mhs='2' AND krs='2' AND idsemester='$vsmm_up[idsemester]' order by idmahasiswa asc ");
 						$unw_cn_vmhs01_sw = $call_nr($unw_vmhs01_sw);
 						while($unw_vmhs01_sww = $call_fas($unw_vmhs01_sw)){
 				//REKAM BRI
-			  	$unw_vrbri01_sw = $call_q("$sl id_biaya_rekam,idmain_rekam,idmahasiswa,idsemester,app FROM biaya_02_rekam WHERE idmahasiswa='$unw_vmhs01_sww[idmahasiswa]' AND (app='1' OR app='3') AND  idsemester='$vsmm_up[idsemester]'");
+			  	$unw_vrbri01_sw = $call_q("$sl id_biaya_rekam,idmain_rekam,idmahasiswa,idsemester,app FROM biaya_02_rekam WHERE idmahasiswa='$unw_vmhs01_sww[idmahasiswa]' AND app='2' AND  idsemester='$vsmm_up[idsemester]'");
 			  		$unw_cn_vrbri01_sww = $call_nr($unw_vrbri01_sw);
 
 			  ?>
@@ -41,7 +41,9 @@
                 <td>
                 <!-- -->
                 	<?php
-						if($unw_cn_vrbri01_sww > 0 ){
+						
+							
+						if($unw_cn_vrbri01_sww < 1  ){ 
 							//echo"$unw_cn_vrbri01_sww";
 							//$aktif_uts = "2";
 							//echo"$aktif_uts";
@@ -49,14 +51,15 @@
                         	 <input type="hidden" value="<?php echo"1"; ?>" name="<?php echo"unw_uts$unw_uts_no"; ?>"> 
 							<span class="badge badge-warning">#masih ada tagihan</span>
                         	 
-						<?php }elseif($unw_cn_vrbri01_sww < 1){
+						<?php }elseif($unw_cn_vrbri01_sww > 0 ){
 								//$aktif_uts = "1";
 									//echo"$aktif_uts";
 							 ?>
                              <input type="hidden" value="<?php echo"2"; ?>" name="<?php echo"unw_uts$unw_uts_no"; ?>"> 
 							<span class="badge badge-success">#Tidak ada tagihan</span>
-                        	
-						<?php } ?>
+             
+                       
+                        <?php } ?>
                 <!-- -->
                 </td>
               </tr>
