@@ -118,6 +118,14 @@
 						1.2 Jika IP Diatas 3.0 maka KRS yang diambil maksimal 24
 					]
 			
+			//Form pengajuan 
+					1. Form prosedure
+								[
+									 1.1 generate kode
+                   1.2 entri data sesuai prosedur input table()
+                   1.3 entri dengan status = '1'
+								]
+			    2. Simpan data()
 				
 		/*Akademik */
 			// Import KRS//
