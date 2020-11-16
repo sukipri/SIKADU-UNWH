@@ -126,6 +126,10 @@
                    1.3 entri dengan status = '1'
 								]
 			    2. Simpan data()
+								
+               /* Table schema  */
+                   
+																														
 				
 		/*Akademik */
 			// Import KRS//
