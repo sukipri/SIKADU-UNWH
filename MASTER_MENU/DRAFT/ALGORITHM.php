@@ -129,7 +129,23 @@
 								
                /* Table schema  */
                    
-																														
+					name />> tb_form_ajuan_01
+						fields 
+							[
+								idmain_form_ajuan_01
+								idmahasiswa
+								idfakultas
+								form_kode_01
+								form_jenis_01
+								form_ket_01
+								form_tglinput_01
+								form_tglajuan_01
+								form_status_01
+								
+								
+							]
+							
+					
 				
 		/*Akademik */
 			// Import KRS//
