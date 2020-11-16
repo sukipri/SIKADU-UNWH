@@ -1,5 +1,5 @@
 <?php session_start();
- include_once"../sc/conek.php";
+ include_once"../../sc/conek.php";
  include"css.php";
 
 	
@@ -18,11 +18,9 @@
 	
  ?>
  	<?php if($uu3['akses']==11){ ?>
- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
+
 <title>JADWAL MENGAJAR</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
 <script language="JavaScript" type="text/JavaScript">
 <!--
 function MM_openBrWindow(theURL,winName,features) { //v2.0
@@ -72,8 +70,8 @@ echo"<b>$dsnnid[iddosen]<br>$dsnnid[nama]</b>";
     </tr>
   </table>
 </form>
-<table width="100%" border="0" align="center" bgcolor="#CECECE" class="table table-bordered">
-  <tr align="center" bgcolor="#E4E4E4">
+<table width="100%" border="0" align="center" bgcolor="#CECECE" class="table table-bordered table-sm table-striped">
+  <tr class="table-info">
     <td width="142" height="35">Kode Mapel</td>
     <td width="237">Judul</td>
     <td width="156">Semester</td>
@@ -117,11 +115,7 @@ $krr = mysql_fetch_array($kr);
 	echo"Diambil &nbsp; $jummhs</a> "; ?></td>
   </tr>
  
-  <?php
- 
-   }
-   }
-  ?>
+  <?php }}  ?>
 </table>
 
 

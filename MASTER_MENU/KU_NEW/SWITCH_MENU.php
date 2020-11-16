@@ -2,7 +2,7 @@
 	
 	switch(@$sql_escape($_GET['ku'])){
 	  default:
-	 include"../../sc/s_o_2.php";
+		 include"../../sc/s_o_2.php";
 	  //include"awal.php";
 	  break;
 	  case'vprofil_dosen':

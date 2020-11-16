@@ -4,11 +4,7 @@
 		} else {
 	 ?>
 	  <?php if($uu['akses']==11){ ?>
-	 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-	<html>
-	<head>
-	<title>Untitled Document</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
 	<style type="text/css">
 	<!--
 	.style343 {font-size: 24px}
@@ -28,26 +24,23 @@
 	<form name="form1" method="post" action="">
 	  <table width="624" align="center">
 		<tr>
-		  <td width="616" colspan="2" valign="top"><span class="style343"><img src="../img/search2.png" width="44" height="50">Pencarian Mahsiswa [IPK]/<a href="?ku=icari_ipk_progdi">Cari PerProdi [IPK]
+		  <td width="616" colspan="2" valign="top"><span class="style343"><img src="../../img/search2.png" width="44" height="50">Pencarian Mahsiswa [IPK]/<a href="?ku=icari_ipk_progdi">Cari PerProdi [IPK]
 		  </a>
 			  <hr color="#F27900">
 		  </span>
-		  <div class="alert alert-dismissible alert-danger">
-	  <button type="button" class="close" data-dismiss="alert">X </button>
-	 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede 
-	</div>
+		  
 		  *(Masukan Kode Mahasiwa yang sudah terdaftar</td>
 		</tr>
 		<tr>
-		  <td valign="top"><input name="cari" type="text" class="form-control" id="cari" size="37" required>      </td>
-		  <td valign="top"><button class="btn btn-info" name="cari_data"><i class="fa fa-send"></i>&nbsp;Cari Data</button></td>
+		  <td valign="top"><input name="cari" type="text" class="form-control form-control-sm" id="cari" size="37" required>      </td>
+		  <td valign="top"><button class="btn btn-info btn-sm" name="cari_data"><i class="fa fa-send"></i>&nbsp;Cari Data</button></td>
 		</tr>
 	  </table>
-	  <div align="center">  </div>
-	</form><br>
+	</form>
+    	<br>
 	<div class="container">
-	<table width="100%" align="center" bgcolor="#FF7735" class="table table-bordered">
-	  <tr align="center" valign="top" bgcolor="#FFA477">
+	<table width="100%" align="center" class="table table-bordered table-sm tabl-striped">
+	  <tr align="center" valign="top" class="table-info">
 		<td width="32" height="36" valign="middle">#</td>
 		<td width="159" valign="middle">NIM</td>
 		<td width="129" valign="middle">Progdi</td>
@@ -72,7 +65,7 @@
 		$kjj = $call_fas($kj);
 		$gel = $call_q("select * from gelombang where idgelombang='$mhss[idgelombang]'");
 		$gell = $call_fas($gel);
-		$sm = $call_q("$sl idsemester,idtahun_ajaran,semester  FROM semester where idsemester='$semes'");
+		$sm = $call_q("$sl idsemester,idtahun_ajaran,semester  FROM semester where idsemester='$mhss[idsemester]'");
 		$smm = $call_fas($sm);
 		$us = $call_q("select iduser_mhs,idmahasiswa,username,passuser FROM user_mhs where idmahasiswa='$mhss[idmahasiswa]'");
 		$uss = $call_fas($us);
@@ -80,7 +73,7 @@
 		$rsemm = $call_fas($rsem);
 	
 	  ?>
-	  <tr align="center" valign="top" bordercolor="#CEE7FF" bgcolor="#FFFFFF">
+	  <tr align="center" valign="top">
 		<td width="32"><?php echo"$no"; ?></td>
 		
 		<td width="159" height="36"><?php echo"<font color=blue><b>$mhss[idmahasiswa]</b></font><br><font color=green><b>$uss[passuser]</b><br><b>$mhss[idkelas]</b>"; ?></td>

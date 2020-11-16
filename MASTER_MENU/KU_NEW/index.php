@@ -75,7 +75,8 @@
 				  <input name="kirim" type="submit" class="btn btn-primary" id="kirim2" value="L.O.G.I.N"></td>
 			  <td width="545" rowspan="2" class="bgk">
 			  <div class="alert alert-dismissible alert-success">
-	  <button type="button" class="close" data-dismiss="alert">LOGIN SIKADU AD.FAKULTAS </button>
+	  <b>#LOGIN SIKADU AD.FAKULTAS</b>
+      <br>
 	  <ul>
 	  <li>Demi Keamanan Account SIKADU Anda Silahkan ganti password secara berkala <br>Lakukan akun sesuai dengan ketentuan yang berlaku</li>
 	  <li>Gunakan Akun anda dengan sebaik-baiknya. </li>

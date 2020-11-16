@@ -5,11 +5,7 @@
 		} else {
 	 ?>
 	  <?php if($uu['akses']==11){ ?>
-	 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-	<html>
-	<head>
-	<title>Untitled Document</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
 	<style type="text/css">
 	<!--
 	.style343 {font-size: 24px}
@@ -27,14 +23,11 @@
 	
 	<body>
 	<form name="form1" method="post" action="">
-	  <table width="784" align="center" class="table">
+	  <table width="784" align="center" class="table table-sm">
 		<tr>
-		  <td colspan="4" valign="top"><span class="style343"><img src="../img/search2.png" width="44" height="50">Cari PerProdi[IPK] <a href="?ku=icari_ipk_nim" class="btn btn-default">Per / NIM</a>
+		  <td colspan="4" valign="top"><span class="style343"><img src="../../img/search2.png" width="44" height="50">Cari PerProdi[IPK] <a href="?ku=icari_ipk_nim" class="btn btn-default">Per / NIM</a>
 				<hr color="#F27900">
-			</span>
-			  <div class="alert alert-dismissible alert-danger">
-				<button type="button" class="close" data-dismiss="alert">X </button>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede </div>
+			
 			  *(Masukan Kode Mahasiwa yang sudah terdaftar</td>
 		</tr>
 		<tr>
@@ -75,14 +68,14 @@
 	  }
 			?>
 		  </select></td>
-		  <td width="210" valign="top"><button class="btn btn-info" name="cari_data"><i class="fa fa-send"></i>&nbsp;Cari Data</button></td>
+		  <td width="210" valign="top"><button class="btn btn-info btn-sm" name="cari_data"><i class="fa fa-send"></i>&nbsp;Cari Data</button></td>
 		</tr>
 	  </table>
 	  <div align="center">  </div>
 	</form><br>
 	<div class="container">
-	<table width="100%" align="center" bgcolor="#FF7735" class="table table-bordered">
-	  <tr align="center" valign="top" bgcolor="#FFA477">
+	<table width="100%" align="center" class="table table-bordered table-striped table-sm">
+	  <tr align="center" valign="top" class="table-info">
 		<td width="32" height="36" valign="middle">#</td>
 		<td width="159" valign="middle">NIM</td>
 		<td width="129" valign="middle">Progdi</td>
@@ -117,7 +110,7 @@
 		$rsemm = $call_fas($rsem);
 	
 	  ?>
-	  <tr align="center" valign="top" bordercolor="#CEE7FF" bgcolor="#FFFFFF">
+	  <tr align="center" valign="top">
 		<td width="32"><?php echo"$no"; ?></td>
 		
 		<td width="159" height="36"><?php echo"<font color=blue><b>$mhss[idmahasiswa]</b></font><br><font color=green><b>$uss[passuser]</b><br><b>$mhss[idkelas]</b>"; ?></td>
@@ -181,10 +174,7 @@
 	
 	
 		<?php
-			$no++;
-			
-			}
-			}
+			$no++;}}
 	
 		?>
 	</table>

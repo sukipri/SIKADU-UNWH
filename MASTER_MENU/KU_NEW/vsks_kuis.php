@@ -1,32 +1,18 @@
-<?php //session_start();
- include_once"../sc/conek.php";
-
-	
-	if(empty($_SESSION['namauser']) AND empty($_SESSION['passuser'])){
+<?php if(empty($_SESSION['namauser']) AND empty($_SESSION['passuser'])){
 		//echo"<center><font size=5 color=black>Anda Harus <a href=../index.php>Login</a> terlebih dahulu</font></center>";
 	    header('location:index.php');
 	} else {
 	$u = mysql_query("select * from user where namauser='$_SESSION[namauser]'");
 	$uu = mysql_fetch_array($u);
 	
- ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<title>Untitled Document</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<script language="JavaScript" type="text/JavaScript">
-<!--
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
-//-->
+ ?>
 </script>
 </head>
 
 
 <body>
-<h4>Hasil Kuisioner</h4>
-<hr color="#FF8040">
+<h5>#Hasil Kuisioner</h5>
+<br>
 <?php
 switch(@mysql_real_escape_string($_GET['sks'])){
 case'edit_sks':
@@ -42,7 +28,7 @@ break;
   <form name="form1" method="post" action="">
     <table width="500" class="table">
       <tr>
-        <td width="94"><select name="dosen" class="form-control">
+        <td width="94"><select name="dosen" class="form-control form-control-sm">
           <option>pilih dosen......................</option>
           <?php
 		$dsn = mysql_query("select * from dosen order by nama asc");
@@ -53,7 +39,7 @@ break;
   }
 		?>
         </select></td>
-        <td width="94"><select name="sm" id="sm" class="form-control">
+        <td width="94"><select name="sm" id="sm" class="form-control form-control-sm">
           <?php
 		$sm = mysql_query("select * from semester order by idmain asc ");
   while($smm = mysql_fetch_array($sm)){
@@ -70,8 +56,8 @@ break;
       </tr>
     </table>
   </form>
-  <table width="100%" border="0" align="center" bgcolor="#CECECE" class="table table-bordered">
-  <tr align="center" bgcolor="#E4E4E4">
+  <table width="100%" border="0" align="center"  class="table table-bordered table-sm table-striped">
+  <tr align="center" class="table-info">
     <td width="145" height="35">Kode Mapel</td>
     <td width="186">Judul</td>
     <td width="124">Semester</td>
@@ -96,7 +82,7 @@ $krr = mysql_fetch_array($kr);
   
   ?>
  
-  <tr align="center" bgcolor="#FFFFFF">
+  <tr align="center">
     <td height="50"><?php echo"<a href=#>$skss[idsks]</a><br>$kjj[kejuruan]<br>$skss[idkelas]"; ?></td>
     <td><?php echo"<b>$krr[judul]</b><br>
 	<u>Oleh &nbsp; $dsnn[nama]</u>

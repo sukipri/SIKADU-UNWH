@@ -1,7 +1,4 @@
 	<?php //session_start();
-	 include_once"../sc/conek.php";
-	
-		
 		if(empty($_SESSION['namauser']) AND empty($_SESSION['passuser'])){
 			//echo"<center><font size=5 color=black>Anda Harus <a href=../index.php>Login</a> terlebih dahulu</font></center>";
 			header('location:index.php');
@@ -11,12 +8,6 @@
 		
 	 ?>
 	   <?php if($uu['akses']==11){ ?>
-	 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-	<html>
-	<head>
-	<title>Untitled Document</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-	</head>
 	<script language="JavaScript" type="text/JavaScript">
 	<!--
 	function MM_openBrWindow(theURL,winName,features) { //v2.0
@@ -41,10 +32,11 @@
 		exit();
 		}
 	  ?>
+      <h5>#Pencarian SKS /FAKULTAS</h5>
 	<form name="form1" method="post" action="">
-	  <table width="600" border="0" class="table">
+	  <table width="600" border="0" class="table table-sm" style="max-width:40rem;">
 		<tr>
-		  <td><select name="cari" class="form-control" required>
+		  <td><select name="cari" style="max-width:15rem;" class="form-control form-control-sm" required>
 			<option value="">kode Program Studi</option>
 			<?php
 			 $fak = $call_q("select * from kejuruan where idfakultas='$fakk02[idfakultas]' order by idkejuruan");
@@ -56,7 +48,7 @@
 			 
 			 ?>
 		  </select></td>
-		  <td><select name="sms" id="sms" class="form-control" required>
+		  <td><select name="sms" id="sms" style="max-width:15rem;" class="form-control form-control-sm" required>
 			<option value="">Pilih Semester</option>
 			<?php
 			$sm = $call_q("select * from semester order by idmain asc limit 100");
@@ -82,8 +74,8 @@
 		exit();
 		}
 	  ?>
-	<table width="100%" border="0" align="center" bgcolor="#7DFF7D" class="table table-bordered">
-	  <tr align="center" class="danger">
+	<table width="100%" border="0" align="center" class="table table-bordered table-sm table-striped">
+	  <tr align="center" class="table-info>
 		<td width="142" height="35">Kode Mapel</td>
 		<td width="175">Judul</td>
 		<td width="165">Semester</td>
@@ -129,18 +121,10 @@
 		  Absensi / Presensi </a></li>
 		<li> <a href="<?php echo"?ku=vsks&idsks=$skss[idsks]"; ?>" onclick="return konfirmasi()">Hapus SKS</a></li><li><a href="<?php echo"#$skss[idsks]"; ?>" onClick="MM_openBrWindow('<?php echo"isoal_01.php?idsks=$skss[idsks]#$skss[idsks]"; ?>','','scrollbars=yes,width=320,height=500')">Buat Soal</a></li><li><a href="<?php echo"#$skss[idsks]"; ?>" onClick="MM_openBrWindow('<?php echo"../SU_admin/inilai_krs.php?idsks=$skss[idsks]&kddsn=$skss[iddosen]"; ?>','','scrollbars=yes,width=700,height=700')">Input NIlai</a></li></ul>	</td>
 	  </tr>
-	 
-	  <?php
-	}
-	   
-	   }
-	 
-	  ?>
-	</table><h3><br>
-	  </h3>
-	
-	</body>
-	</html>
+	<?PHP }} ?>
+	</table>
+    
+    </body>
 	<?php
 	}else{
 	
@@ -148,6 +132,4 @@
 	
 	}
 	?>
-	<?php
-	}
-	?>
+	<?php } ?>
