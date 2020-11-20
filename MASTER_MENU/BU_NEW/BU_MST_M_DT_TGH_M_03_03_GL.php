@@ -35,7 +35,7 @@
 			//..GELOMBANG..//
 			$vgl01_sw = $call_q("$sl idgelombang,gelombang FROM gelombang WHERE idgelombang='$vmhs01_sww[idgelombang]'");
 				$vgl01_sww = $call_fas($vgl01_sw);
-				//echo"$vmhs01_sww[idsemester]";
+				//echo"$vmhs01_sww[idsemester]";	
    ?>
           <tr>
             <td><?php echo"$no_mhs"; ?></td>
@@ -68,8 +68,8 @@
           	
             <input type="hidden" value="<?php echo"$c_kode_vtghr01$no_mhs"; ?>" name="<?php echo"kode_tgh_rec$no_mhs"; ?>" />
             <input type="hidden" value="<?php echo"$IDMAIN$no_mhs"; ?>" name="<?php echo"idmain$no_mhs"; ?>" />
-            <!-- <input type="text" value="<?php //echo"$vtgh01_sww[kode_urut]$vjtgh_sww02[nama]"; ?>" name="<?php //echo"kode_urut$no_mhs"; ?>" /> -->
-           <!-- <input type="text" value="<?php //echo"$vmhs01_sww[idkejuruan]"; ?>" name="<?php //echo"idkejuruan$no_mhs"; ?>" /> -->
+                <!-- <input type="text" value="<?php //echo"$vtgh01_sww[kode_urut]$vjtgh_sww02[nama]"; ?>" name="<?php //echo"kode_urut$no_mhs"; ?>" /> -->
+               <!-- <input type="text" value="<?php //echo"$vmhs01_sww[idkejuruan]"; ?>" name="<?php //echo"idkejuruan$no_mhs"; ?>" /> -->
             <input type="hidden" value="<?php echo"$vtgh01_sww[idmain_tagihan_01]"; ?>" name="<?php echo"idmain_tagihan$no_mhs"; ?>" />
             <input type="hidden" value="<?php echo"$vmhs01_sww[idmahasiswa]"; ?>" name="<?php echo"nim$no_mhs"; ?>" />
             <input type="hidden" value="<?php echo"$vmhs01_sww[nama]"; ?>" name="<?php echo"nama$no_mhs"; ?>" />

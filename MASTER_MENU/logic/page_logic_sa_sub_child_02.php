@@ -15,15 +15,21 @@
                 case'BU_MST_M_DT_TGH_M_03_03':
                     include"BU_MST_M_DT_TGH_M_03_03.php";
                 break;
+                case'BU_MST_M_DT_TGH_M_03_03_GL':
+					include"BU_MST_M_DT_TGH_M_03_03_GL.php";
+				break;
             //Update kartu Ujian
-            case'BU_MST_M_UANG_UP_UJIAN_UTS_KEJ':
-                include"BU_MST_M_UANG_UP_UJIAN_UTS_KEJ.php";
-            break;
+                case'BU_MST_M_UANG_UP_UJIAN_UTS_KEJ':
+                    include"BU_MST_M_UANG_UP_UJIAN_UTS_KEJ.php";
+                break;
                 case'BU_MST_M_UANG_UP_UJIAN_UTS':
                     include"BU_MST_M_UANG_UP_UJIAN_UTS.php";
                 break;
                 case'BU_MST_M_UANG_UP_UJIAN_UAS':
                     include"BU_MST_M_UANG_UP_UJIAN_UAS.php";
+                break;
+                case'BU_MST_M_UANG_UP_UJIAN_UTS_NIM':
+                    include"BU_MST_M_UANG_UP_UJIAN_UTS_NIM.php";
                 break;
 
     }

@@ -23,7 +23,7 @@
 			$vjtgh_sw = $call_q("$call_sel tb_jenis_tagihan");
 				while($vjtgh_sww = $call_fas($vjtgh_sw)){
 						?>
-                			<a href="<?php echo"?HLM=BU_MST_M&SUB=BU_MST_M_DT_TGH_M&SUB_CHILD=BU_MST_M_DT_TGH_M_03_01&SUB_CHILD_02=BU_MST_M_DT_TGH_M_03_03_GL&IDKEJ01=$IDKEJ01&IDJTGH01=$vjtgh_sww[idmain_jenis_tagihan]"; ?>"><i class="fas fa-file-alt"></i>&nbsp;<?php echo"$vjtgh_sww[nama]"; ?></a>
+                			<a href="<?php echo"?HLM=BU_MST_M&SUB=BU_MST_M_DT_TGH_M&SUB_CHILD=BU_MST_M_DT_TGH_M_03_01&SUB_CHILD_02=BU_MST_M_DT_TGH_M_03_02&IDKEJ01=$IDKEJ01&IDJTGH01=$vjtgh_sww[idmain_jenis_tagihan]"; ?>"><i class="fas fa-file-alt"></i>&nbsp;<?php echo"$vjtgh_sww[nama]"; ?></a>
                         <br>
 				<?php } ?>
             </td>

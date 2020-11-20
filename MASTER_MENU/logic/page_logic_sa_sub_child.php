@@ -81,6 +81,9 @@
 				case'BU_MST_M_DT_TGH_M_03_01':
 					include"BU_MST_M_DT_TGH_M_03_01.php";
 				break;
+				case'BU_MST_M_DT_TGH_M_03_01_GL':
+					include"BU_MST_M_DT_TGH_M_03_01_GL.php";
+				break;
 
 //SIA_NEW.....................................................................
 				//MASTER

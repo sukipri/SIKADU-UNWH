@@ -97,16 +97,20 @@
           </tr>
           <tr>
             <td colspan="2">
+            <!--
             Rule Querying Kelas<br>
-            	<textarea class="form-control" name="rule" required>kode_kelas='REG' OR kode_kelas='EKS'</textarea>  <br />
+            	<textarea class="form-control" name="rule" readonly required>kode_kelas='REG' OR kode_kelas='EKS'</textarea>  <br />
                 <span class="badge badge-primary">COntoh penggunaan RUle</span>
                 <blockquote>kode_kelas='[kode_kelas]' OR kode_kelas='[kode_kelas]'</blockquote>
            	  </td>
             <td>
+            -->
+            <!--
               Rule Querying UTS UAS<br>
-            	<textarea class="form-control" name="rule02" required>uas='2' AND uts='1'</textarea>  <br />
+            	<textarea class="form-control" name="rule02" readonly required>uas='2' AND uts='1'</textarea>  <br />
                 <span class="badge badge-primary">COntoh penggunaan RUle</span>
              	 uas='2' AND uts='1'
+                 -->
             </td>
             <td><textarea name="ket" class="form-control"></textarea></td>
            
@@ -132,8 +136,8 @@
         <td width="19%">Kode Bayar</td>
         <td width="19%">Nominal</td>
         <td width="15%">Gelombang</td>
-        <td width="12%">RULE</td>
-        <td width="7%">RULE 02</td>
+        <!-- <td width="12%">RULE</td> -->
+        <!-- --<td width="7%">RULE 02</td> -->
         <td width="7%">Ajaran</td>
         <td width="13%">####</td>
       </tr>
@@ -158,8 +162,8 @@
         <td><?php echo"$vtgh01_sww[kode_urut]$vjtgh02_sww[nama]<br>$vtgh01_sww[kode_kelas]"; ?></td>
         <td><?php echo"Rp.$nom_tgh"; ?></td>
         <td><?php echo"$vglm_sww[gelombang] $vglm_sww[tahun]"; ?></td>
-        <td><?php echo"$vtgh01_sww[rule]"; ?></td>
-        <td><?php echo"$vtgh01_sww[rule_02]"; ?></td>
+        <!-- <td><?php //echo"$vtgh01_sww[rule]"; ?></td> -->
+       <!--  <td><?php //echo"$vtgh01_sww[rule_02]"; ?></td> -->
         <td><?php echo"$vthn01_sww[ajaran]"; ?></td>
         <td>
 	      <a href="<?php echo"?HLM=BU_MST_M&SUB=BU_MST_M_DT_TGH_M&SUB_CHILD=BU_MST_M_DT_TGH_M_02&IDDELTGH=$vtgh01_sww[idmain_tagihan_01]&DELTGH=DELTGH"; ?>" class="badge badge-danger" onClick="return konfirmasi()"><i class="fas fa-ban"></i>&nbsp;Delete</a>
