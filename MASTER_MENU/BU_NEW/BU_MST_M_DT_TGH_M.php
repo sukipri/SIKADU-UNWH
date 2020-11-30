@@ -9,6 +9,8 @@
     &nbsp;
     <a href="?HLM=BU_MST_M&SUB=BU_MST_M_DT_TGH_M&SUB_CHILD=BU_MST_M_DT_TGH_M_02"><i class="fas fa-cube"></i>&nbsp;Ent.Master Tagihan </a>
     &nbsp;
+    <a href="?HLM=BU_MST_M&SUB=BU_MST_M_DT_TGH_M&SUB_CHILD=BU_MST_M_DT_TGH_M_02_UPLOAD"><i class="fas fa-cube"></i>&nbsp;Import.Master Tagihan(XLS) </a>
+    &nbsp;
     <a href="?HLM=BU_MST_M&SUB=BU_MST_M_DT_TGH_M&SUB_CHILD=BU_MST_M_DT_TGH_M_03"><i class="fas fa-cube"></i>&nbsp;Export Tagihan </a>
     
 	<?php include"../logic/page_logic_sa_sub_child.php"; ?>

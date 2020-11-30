@@ -7,6 +7,17 @@
 
 	<?php
 		/*Keuangan*/
+			( /* UPDATE Revisi data keuangan */
+				1. tagihan briva dan bank jateng jadikan 1
+				2. Global per prodi Update Tagihan 
+				3. cetak tagihan di menu mahasiswa sesuaikan data bridging BRI 
+				4.pengaktifkan KRS [SPP,OPS,REGISTRATION,UKT]
+				5. menu GLobal UPDATE [UTS,KRS,UAS]
+				6. Metode pengambilan Tagihan menggunakan metode Basket Algorithm
+				
+			
+			)
+			--SUB CLOSE--
 			// Export tagihan mahasiswa per angakatan //
 				1.pilih jenis tagihan
 				2.Pilih angkatan
@@ -31,7 +42,7 @@
 					]
 				5.Entri nominal tagihan
 				6.Data tersimpan / Terunggah
-				
+				--SUB CLOSE--
 				// Export tagihan mahasiswa semi global //
 					1. form prosedure tagihan global
 						[
@@ -41,13 +52,13 @@
 								[
 									1.3.A fetching (tb_tagihan_01)
 									1.3.B GET data sort by (jenis tagihan,gelombang,kode,kelas) FROM (mahasiswa|Golbal)
-									1.3.C 
+									
 									
 								]
 						]
 					
 					
-				
+				--SUB CLOSE--
 				//update BRIVA & HIJACK UAS UTS mahasiswa 
 					1. tampilan Daftar Briva(mahasiswa yang sudah membyaar di briva)
 						[
@@ -69,7 +80,7 @@
 												*/
 													
 										2.1.B  IF [APP = 2 SUM(total Row) == SUM(APP = 2 SUM(total from Server side:PHP) [OPT 3]
-														[
+														[ -Set Conddition-
 															/*Penjabaran linear Break*/
 																Fetching data field(rows)
 																IF field[APP]= '2' 
@@ -83,18 +94,31 @@
 								
 							2.2 
 						]
+					--SUB CLOSE--
+				//IMPORT XLS(CSV)
+					1. DOwnload template XLS BU 
+								[
+									1. Set data XLS(CSV)
+										[ -setcomponent-
+											1.1 IN APP [IDMAIN,jenis_tagihan]
+											1.2 IN XLS []
+										
+										]
+								
+								]
+				--SUB CLOSE--
 				
-				{ /*NOTE APP Keuangan*/
-					/* TASK TARGET */
-						Update hijack UTS UAS mahasiswa yang sudah bayar
-						BEBERAPA TAGIHAN DI KELAS REG/EKS BLM OK
-						CETAK TAGIHAN BRIVA
-						PINDAH SCRIPT SIA DEV KE SIA
-						TOTAL PEMBAYARAN UPDATE DATA BRIVA
-						MENU REPORT 2 BANK, MINGGUAN/BULANAN/TAHUNAN
-					
-				}
-		
+								{ /*NOTE APP Keuangan*/
+									/* TASK TARGET */
+										Update hijack UTS UAS mahasiswa yang sudah bayar
+										BEBERAPA TAGIHAN DI KELAS REG/EKS BLM OK
+										CETAK TAGIHAN BRIVA
+										PINDAH SCRIPT SIA DEV KE SIA
+										TOTAL PEMBAYARAN UPDATE DATA BRIVA
+										MENU REPORT 2 BANK, MINGGUAN/BULANAN/TAHUNAN
+									
+								}
+		--CLOSE--
 		/* Mahasiswa*/
 			// Biaya Mahasiswa => Tagihan Mahasiswa //
 			1.Pilih Tagihan
@@ -138,6 +162,7 @@
 								form_kode_01
 								form_jenis_01
 								form_ket_01
+								form_ketjawab_01
 								form_tglinput_01
 								form_tglajuan_01
 								form_status_01
@@ -146,7 +171,7 @@
 							]
 							
 					
-				
+				--CLOSE--
 		/*Akademik */
 			// Import KRS//
 			1.list krs
@@ -158,6 +183,10 @@
 					3.3 Prosess simpan sesuai prosedur INSERT PROCCESS
 					3.4 Preview result
 				]
+				
+		/*Admin Fakultas */
+			//Verifikasi Form pengajuan//
+			
 		
 		
 					

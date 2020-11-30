@@ -6,7 +6,7 @@
 		?>
 	<h5>#Update kartu ujian</h5>		
     <br />
-    	<a href="?HLM=BU_MST_M&SUB=BU_MST_M_UANG&SUB_CHILD=BU_MST_M_UANG_UP_UJIAN&SUB_CHILD_02=BU_MST_M_UANG_UP_UJIAN_UTS_NIM" class="btn btn-outline-info"><i class="fas fa-file-alt"></i>&nbsp;UTS / NIM</a>
+    	<a href="?HLM=BU_MST_M&SUB=BU_MST_M_UANG&SUB_CHILD=BU_MST_M_UANG_UP_UJIAN&SUB_CHILD_02=BU_MST_M_UANG_UP_UJIAN_UTS_NIM" class="btn btn-outline-info"><i class="fas fa-file-alt"></i>&nbsp;Aktifasi / NIM</a>
          &nbsp;
      		<i class="fas fa-arrows-alt-h"></i>
             &nbsp;

@@ -116,9 +116,9 @@
                  <select name="idsemester" class="form-control form-control-sm" required>
                  <option value=""></option>
                  <?php 
-				 	$vsmt01_sw = $call_q("$sl idsemester,idmain,idtahun_ajaran,semester FROM semester order by idsemester desc");
+				 	$vsmt01_sw = $call_q("$sl idsemester,idmain,idtahun_ajaran,semester,aktif FROM semester order by idsemester desc");
 						while( $vsmt01_sww = $call_fas($vsmt01_sw)){
-							echo"<option value=$vsmt01_sww[idsemester]>$vsmt01_sww[semester]</option>";	
+							echo"<option value=$vsmt01_sww[idsemester]>$vsmt01_sww[semester] - $vsmt01_sww[aktif]</option>";	
 						}
 				 ?>
                  </select>

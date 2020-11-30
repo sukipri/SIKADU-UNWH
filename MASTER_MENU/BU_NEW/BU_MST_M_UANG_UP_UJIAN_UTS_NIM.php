@@ -17,7 +17,7 @@ if(empty($_SESSION['namauser']) AND empty($_SESSION['passuser'])){
 
   <table width="624" align="center">
     <tr>
-      <td width="616" valign="top"><span><i class="fas fa-search"></i>&nbsp;Update Kartu UTS / NIM 
+      <td width="616" valign="top"><span><i class="fas fa-search"></i>&nbsp;Update Kartu UTS & UAS / NIM 
         <hr color="#F27900">
       	</span>
       </td>
