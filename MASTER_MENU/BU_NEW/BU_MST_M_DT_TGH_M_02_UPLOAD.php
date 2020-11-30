@@ -7,7 +7,7 @@
 <body>
 <h5><i class="far fa-file-excel"></i>&nbsp;Import Master Tagihan</h5>
 <br>
-	<a href="#" class="btn btn-outline-success btn-sm">#Download Template</a>
+	<a href="/MASTER_MENU/DRAFT/TEMP_XLS.csv" class="btn btn-outline-success btn-sm">#Download Template</a>
  	<hr color="#009999">
 			<!-- --->
             	<?PHP include"../logic/EXE_BU_TGH_01_IMP_01.php"; ?>
