@@ -87,7 +87,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 					
 					
 	<div style="overflow:auto;width:auto;height:30rem;padding:10px;border:1px solid #eee">
-	<table width="100%"  border="0" class="table table-bordered table-sm">
+	<table width="100%"  border="0" class="table table-bordered table-sm" style="max-width:60rem;">
 	  <tr class="table-success">
 		<td width="12%">#</td>
 		<td width="16%">UPLOAD TANGGAL </td>
@@ -116,7 +116,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 				?>
 	  <tr>
 		<td><?php if($byy['app']==1){?>
-		  <a href="<?php echo"admin_sia_ui.php?mng=TAGIHAN&ID1=$IDMAIN$no_by&ID2=$uu[idmahasiswa]&ID4=$byy[nominal]&SAVE=SAVE&ID5=$byy[idbiaya_02]&ID6=$byy[THN]#SAVING";
+			 <a href="<?php echo"admin_sia_ui.php?mng=TAGIHAN&ID1=$IDMAIN$no_by&ID2=$uu[idmahasiswa]&ID4=$byy[nominal]&SAVE=SAVE&ID5=$byy[idbiaya_02]&ID6=$byy[THN]#SAVING";
 		  //echo"admin_sia_ui.php?mng=TAGIHAN&ID1=$IDMAIN$no_by&ID2=$uu[idmahasiswa]&ID3=$byy[id_biaya_rekam]&ID4=$byy[nominal]&SAVE=SAVE&ID5=$byy[idbiaya_02]&ID6=$byy[THN]#SAVING"; ?>" class="btn btn-warning btn-sm"><i class="fa fa-hand-grab-o"></i>&nbsp;Bayar BRI</a>
 		<?php }elseif($byy['app']==2){echo"<font color=green><b>#PAID</b></font>";?>
 					<?php }  ?>		</td>		
@@ -167,7 +167,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 						if(isset($_GET['DL'])){
 							$DEL = @$sql_escape($_GET['DEL']);
 							$IDBY = @$sql_escape($_GET['IDBY']);
-							@$call_q("$up biaya_02_rekam_bri set idmain_rekam='0' , app='1' where idmahasiswa='$DEL' and idmain_rekam='$IDBY'");
+							@$call_q("$up biaya_02_rekam_bri set idmain_rekam='0' , app='1' where idmahasiswa='$DEL' and id_biaya_rekam='$IDBY'");
 								//header("location:DELETE_TAGIHAN.php?IDDEL=$DEL&IDBY=$byy_r[idbiaya_02]###");
 								header("location:?mng=TAGIHAN");
 						
@@ -181,7 +181,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 					*/
 		?>
 		
-		<table width="100%" border="0" class="table table-bordered table-sm">
+		<table width="100%" border="0" class="table table-bordered table-sm" style="max-width:70rem;">
                   <tr class="table-info">
                     <td width="7%">KODE</td>
                     <td width="5%">NIM</td>
@@ -194,7 +194,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 				  <?php 
 				   $by_r = $call_q("$call_sel biaya_02_rekam_bri where idmahasiswa='$kdmhs' AND app='3' order by idsemester desc ");
 						 $no_byr = 1;
-				  	while($byy_r = $call_fas($by_r)){
+				  		while($byy_r = $call_fas($by_r)){
 						$sm_r = $call_q("$sl idsemester,idtahun_ajaran,semester from semester where idsemester='$byy_r[idsemester]'");
 						$smm_r = mysql_fetch_assoc($sm_r);
 						$hit_byy_r = number_format($byy_r['nominal']);
@@ -210,10 +210,12 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 					}elseif($byy_r['app']==2){echo"<font color=green><b>Terbayar</b></font>";}  ?>
 					  </td>
 				      <td>
-					  <!--<a href="<?php echo"?mng=TAGIHAN&DEL=$byy_r[idmahasiswa]&IDBY=$byy_r[idmain_rekam]&DL=DL#DELETE";
+					  <!--<a href="<?php //echo"?mng=TAGIHAN&DEL=$byy_r[idmahasiswa]&IDBY=$byy_r[idmain_rekam]&DL=DL#DELETE";
 					  //echo"?mng=TAGIHAN&DEL=$byy_r[id_biaya_rekam]&IDBY=$byy_r[idbiaya_02]&DL=DL#DELETE"; ?>" onClick="return konfirmasi()" class="btn btn-danger btn-sm">Hapus</a>&nbsp;-->
-					  <a href="<?php echo"CTK_TAGIHAN.php?IDTG=$byy_r[kode]#";  ?>" target="_blank" class="btn btn-warning btn-sm"><i class="fa fa-print"></i>&nbsp;Cetak</a>
+					  <!-- <a href="<?php //echo"CTK_TAGIHAN.php?IDTG=$byy_r[kode]#";  ?>" target="_blank" class="btn btn-warning btn-sm"><i class="fa fa-print"></i>&nbsp;Cetak</a> -->
+                      <a href="<?PHP echo"?mng=TAGIHAN&DEL=$kdmhs&IDBY=$byy_r[id_biaya_rekam]&DL=DL#DELETE"; ?>" class="btn btn-danger btn-sm" onClick="return konfirmasi()">#DELETE</a>
 					  </td>
+                      
                   </tr>
 				  
 				  <?php $no_byr++;} ?>

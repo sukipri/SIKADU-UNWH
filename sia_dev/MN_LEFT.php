@@ -1,7 +1,8 @@
 <center><h6 class="badge badge-info">{<?php echo"$fkll[fakultas]"; ?> - <?php echo"$kejj[kejuruan]"; ?> - <?php echo"$mhss[idtahun_ajaran]"; ?>}</h6>
+		<br />
 	 <?php
 		
-	  echo"<b><font color=blue>NIM&nbsp;$uu[idmahasiswa] &nbsp;&nbsp; <br>Login As $mhss[nama]</span></font></b>";
+	  echo"<b><font color=blue>NIM&nbsp;$uu[idmahasiswa] <br>Login As $mhss[nama]</span></font></b>";
 	  
 	  //include"../sc/s_o_2.php";
 		
@@ -33,7 +34,7 @@
         </td>
       </tr>
 	  <tr class="table-info">
-	    <td><span class="badge badge-warning"><b>#layanan Mahasisiswa</span></td>
+	    <td><span class="badge badge-info"><b>#layanan Mahasisiswa</span></td>
       </tr>
 	  <tr>
 	    <td>
@@ -43,7 +44,7 @@
         </td>
       </tr>
 	  <tr class="table-success">
-	    <td><span class="badge badge-primary"><b>#Pembayaran</span></td>
+	    <td><span class="badge badge-success"><b>#Pembayaran</span></td>
       </tr>
 	  <tr>
 	    <td>
@@ -53,7 +54,7 @@
         </td>
       </tr>
 	  <tr class="table-info">
-	    <td><span class="badge badge-danger"><b>#Cetak Kartu</span></td>
+	    <td><span class="badge badge-info"><b>#Cetak Kartu</span></td>
       </tr>
 	  <tr>
 	    <td>

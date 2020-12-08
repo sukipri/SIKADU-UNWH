@@ -33,6 +33,19 @@
                    </select>
                    <br>
                    
+                   <span class="badge badge-info">#Semester</span>
+                   <select name="idsemester" class="form-control form-control-sm" required>
+                   <option value=""></option>
+                   <?php
+				   		$unw_vsem01_sw = $call_q("$call_sel semester order by idsemester");
+							while($unw_vsem01_sww = $call_fas($unw_vsem01_sw)){
+				   
+				   ?>
+                   		<option value="<?PHP echo"$unw_vsem01_sww[idsemester]"; ?>"><?PHP echo"$unw_vsem01_sww[semester]"; ?></option>
+                   <?PHP } ?>
+                   
+                   </select>
+                   <br>
                    <span class="badge-info">#Keterangan</span>
                    <br>
                    <textarea name="form_ket_01" class="form-control"></textarea>
@@ -68,8 +81,9 @@
 					$form_jenis_01 = @$sql_escape($_POST['form_jenis_01']);
 					$form_ket_01 = @$sql_escape($_POST['form_ket_01']);
 					$form_tglajuan_01 = @$sql_escape($_POST['form_tglajuan_01']);
+					$idsemester = @$sql_escape($_POST['idsemester']);
 					
-						$save_form_ajuan_01 = $call_q("$in tb_form_ajuan_01(idmain_form_ajuan_01,idmahasiswa,idfakultas,form_kode_01,form_jenis_01,form_ket_01,form_tglinput_01,form_tglajuan_01,form_status_01)VALUES('$IDMAIN','$kdmhs','$fkll[idfakultas]','$form_kode_01','$form_jenis_01','$form_ket_01','$date_html5','$form_tglajuan_01','1')");
+						$save_form_ajuan_01 = $call_q("$in tb_form_ajuan_01(idmain_form_ajuan_01,idmahasiswa,idfakultas,idsemester,form_kode_01,form_jenis_01,form_ket_01,form_tglinput_01,form_tglajuan_01,form_status_01)VALUES('$IDMAIN','$kdmhs','$fkll[idfakultas]','$idsemester','$form_kode_01','$form_jenis_01','$form_ket_01','$date_html5','$form_tglajuan_01','1')");
 						if($save_form_ajuan_01){
 						header("LOCATION:?mng=FORM_PENGAJUAN_01");
 						}else{
