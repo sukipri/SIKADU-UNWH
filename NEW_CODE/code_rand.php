@@ -26,6 +26,7 @@
 	$date_html5_02 = date("d/m/Y");
 	$date_html5_tiny = date("y-m-d");
 
+	//-Tanggal Text -//
 	function FS_DATE($fsdate)
 	{
 		$MONTH= array (1 =>   'Januari',
@@ -44,9 +45,51 @@
 		$split = explode('-', $fsdate);
 		return $split[2] . ' ' . $MONTH[ (int)$split[1] ] . ' ' . $split[0];
 	}
+	//-CLOLSE-//
 
-
-
+	//Bulan Romawi
+	function FS_ROM($bln){
+		switch ($bln){
+			case 1: 
+				return "I";
+				break;
+			case 2:
+				return "II";
+				break;
+			case 3:
+				return "III";
+				break;
+			case 4:
+				return "IV";
+				break;
+			case 5:
+				return "V";
+				break;
+			case 6:
+				return "VI";
+				break;
+			case 7:
+				return "VII";
+				break;
+			case 8:
+				return "VIII";
+				break;
+			case 9:
+				return "IX";
+				break;
+			case 10:
+				return "X";
+				break;
+			case 11:
+				return "XI";
+				break;
+			case 12:
+				return "XII";
+				break;
+		}
+}
+					
+//-CLose-//
 
 	$nf = @number_format;
 		//IDMAIN FIELDS

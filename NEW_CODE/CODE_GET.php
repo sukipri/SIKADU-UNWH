@@ -44,10 +44,13 @@
                 $IDJTGH01  = @$sql_escape($_GET['IDJTGH01']);
                 $IDAJR01  = @$sql_escape($_GET['IDAJR01']);
                 $IDKLS01 = @$sql_escape($_GET['IDKLS01']);
+
             /* AKADEMIK */
                 $IDKJ01 = @$sql_escape($_GET['IDKJ01']);
+
             /* MAHASISWA */
                 //GET VIEW//
+                $IDMHS01 = @$sql_escape($_GET['IDMHS01']);
                 $IDBYR01 = @$sql_escape($_GET['IDBYR01']); //ID Biaya tagihan
                 $IDJKDBY01 = @$sql_escape($_GET['IDJKDBY01']); //Jenis tagihan
                 $BYNOM01 = @$sql_escape($_GET['BYNOM01']); //Nominal
@@ -55,6 +58,9 @@
                 $IDBTREC01  = @$sql_escape($_GET['IDBTREC01']); //idmain tagihan_rec
                 //DELETE//
                 $IDDELTTEMP= @$sql_escape($_GET['IDDELTTEMP']);
+
+            /*ADmin Fakultas */
+                $IDFAJU01 = @$sql_escape($_GET['IDFAJU01']);
 				
 
 
