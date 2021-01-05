@@ -19,6 +19,12 @@
                     $hit_vtghr01 = $nr_vtghr01 + 1;
                     $hit_zero_vtghr01 = sprintf("%02d", $hit_vtghr01);
                     $c_kode_vtghr01= "REC$date_ack_tiny$hit_zero_vtghr01";
+            //master tb_info_keu
+            $vinkeu01 = $call_q("$sl info_kode_keu FROM tb_info_keu ");
+            $nr_vinkeu01 = $call_nr($vinkeu01);
+            $hit_vinkeu01 = $nr_vinkeu01 + 1;
+            $hit_zero_vinkeu01 = sprintf("%02d", $hit_vinkeu01);
+            $c_kode_vinkeu01= "IKEU$date_ack_tiny$hit_zero_vinkeu01";
         /*MAHASIWA.........................................................................*/
                 //tb_tagihan_temp
                 $vttemp01 = $call_q("$sl kode FROM tb_tagihan_01_temp ");
