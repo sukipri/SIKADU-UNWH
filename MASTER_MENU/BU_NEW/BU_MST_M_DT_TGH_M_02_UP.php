@@ -90,42 +90,59 @@
             <br />
             <select name="kode_kelas" class="form-control form-control-sm" required>
             	<option value="">Kelas</option>
-                <!--  -->
-                <option value="EKS">Ekstensi</option>
+                <!--  >Ekstensi</option>
                 <option value="REG">Reguler</option>
                 <option value="PAKET">PAKET</option>
                 <option value="PA">PA</option>
                 <option value="PB">PB</option>
                 <option value="BM">BM</option>
                 <option value="BSW">BSW</option>
-               
-                <?php 
-					/*
-					$vkls01_sw = $call_q("$call_sel kelas order by idkelas asc");
-						while($vkls01_sww = $call_fas($vkls01_sw)){
-								if($vtgh01_sww['kode_kelas']==$vkls01_sww['idkelas']){
-							echo"<option value=$vkls01_sww[idkelas] selected>$vkls01_sww[kelas]</option>";
-						}else{
-							echo"<option value=$vkls01_sww[idkelas]>$vkls01_sww[kelas]</option>";
+                -->
+				   <?PHP
+			  		$unw_vflg01_sw = $call_q("$call_sel tb_flag_01 WHERE flag_tipe_01='KELAS'");
+						while($unw_vflg01_sww = $call_fas($unw_vflg01_sw)){
+							if($vtgh01_sww['kode_kelas']==$unw_vflg01_sww['idmain_flag_01']){
+							echo"<option value=$unw_vflg01_sww[idmain_flag_01] selected>$unw_vflg01_sww[flag_nama_01]</option>";	
+						}else{ 
+						echo"<option value=$unw_vflg01_sww[idmain_flag_01]>$unw_vflg01_sww[flag_nama_01]</option>";	
 						}}
-			*/
-				?>
+			  ?>
+              
             </select>
             </td>
           </tr>
           <tr>
-            <td colspan="2">Rule Querying
+            <td colspan="2"> <!--Rule Querying
             	<textarea class="form-control" name="rule" required><?php echo"$vtgh01_sww[rule]"; ?></textarea> <br />
                 Rule Querying UTS UAS<br>
             	<textarea class="form-control" name="rule02" required><?php echo"$vtgh01_sww[rule_02]"; ?></textarea>  <br />
+                -->
+                #Keterangan<br />
+                <textarea name="ket" class="form-control"><?php echo"$vtgh01_sww[ket]"; ?></textarea>
                 </td>
-            <td><textarea name="ket" class="form-control"><?php echo"$vtgh01_sww[ket]"; ?></textarea></td>
+            <td>-</td>
             <td><br />
-            <select name="masa_biaya" class="formn-control form-control-sm" required>
-              <option value="-">eMPTY</option>
-              <option value="2">Biaya 1 *Awal Semester</option>
-              <option value="1">Biaya 2 *Pertengahan Semester</option>
-            </select></td>
+            <select name="tipe_spp" class="form-control form-control-sm" required>
+              <option value="">Tipe Pembayaran SPP</option>
+              <?PHP
+			  		$unw_vflg01_sw02 = $call_q("$call_sel tb_flag_01 WHERE flag_tipe_01='SPP'");
+						while($unw_vflg01_sww02 = $call_fas($unw_vflg01_sw02)){
+							if($vtgh01_sww['tipe']==$unw_vflg01_sww02['idmain_flag_01']){
+							echo"<option value=$unw_vflg01_sww02[idmain_flag_01] selected>$unw_vflg01_sww02[flag_nama_01]</option>";	
+						}else{ 
+						echo"<option value=$unw_vflg01_sww02[idmain_flag_01]>$unw_vflg01_sww02[flag_nama_01]</option>";	
+						}}
+			  ?>
+              
+              
+              <!--
+              <option value="SPPSMT">Tiap Semester</option>
+              <option value="SPPBLN">Tiap Bulan</option>
+              -->
+            </select>
+            <br />
+            <span class="badge badge-info">*Jika tagihan bersangkutan dengan SPP mahasiswa</span>
+           </td>
           </tr>
 	</table>
   <button class="btn btn-success btn-sm" name="simpan"><i class="fas fa-save"></i>&nbsp;Update</button>

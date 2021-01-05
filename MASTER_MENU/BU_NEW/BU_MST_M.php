@@ -12,6 +12,8 @@
     <a href="?HLM=BU_MST_M&SUB=BU_MST_M_DT_TGH_M" class="btn btn-outline-warning"><i class="fas fa-database"></i>&nbsp;Data Tagihan</a>
     &nbsp;
     <a href="?HLM=BU_MST_M&SUB=BU_MST_M_UANG" class="btn btn-outline-success"><i class="fa fa-italic"></i>&nbsp;Tagihan <> Pembayaran</a>
+    &nbsp;
+    <a href="?HLM=BU_MST_M&SUB=BU_MST_M_INFO_M" class="btn btn-outline-info"><i class="fa fa-italic"></i>&nbsp;Infomasi</a>
    
     		<br>
 			<?php include"../logic/page_logic_sa_sub.php"; ?>

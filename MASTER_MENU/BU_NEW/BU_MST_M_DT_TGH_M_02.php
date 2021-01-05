@@ -12,7 +12,7 @@
 				}
 		?>
 <form method="post" action="">
-	<table width="100%" border="0" class="table table-bordered table-sm" style="max-width:50rem;">
+  <table width="100%" border="0" class="table table-bordered table-sm" style="max-width:50rem;">
           <tr class="table-info">
             <td colspan="4"># Entri Master Tagihan</td>
           </tr>
@@ -75,7 +75,7 @@
             <td>
             <select name="kode_kelas" class="form-control form-control-sm" required>
             	<option value="">Kelas</option>
-                <!-- -->
+                <!-- 
                 <option value="EKS">Ekstensi</option>
                 <option value="REG">Reguler</option>
                 <option value="PAKET">PAKET</option>
@@ -83,36 +83,32 @@
                 <option value="PB">PB</option>
                 <option value="BM">BM</option>
                 <option value="BSW">BSW</option>
-                
-                <?php 
-					/*
-					$vkls01_sw = $call_q("$call_sel kelas order by idkelas asc");
-						while($vkls01_sww = $call_fas($vkls01_sw)){
-							echo"<option value=$vkls01_sww[idkelas]>$vkls01_sww[kelas]</option>";
-						}
-				*/
-				?>
+                -->
+               <?PHP
+			  		$unw_vflg01_sw = $call_q("$call_sel tb_flag_01 WHERE flag_tipe_01='KELAS'");
+						while($unw_vflg01_sww = $call_fas($unw_vflg01_sw)){
+							if($vtgh01_sww['kode_kelas']==$unw_vflg01_sww['idmain_flag_01']){
+							echo"<option value=$unw_vflg01_sww[idmain_flag_01] selected>$unw_vflg01_sww[flag_nama_01]</option>";	
+						}else{ 
+						echo"<option value=$unw_vflg01_sww[idmain_flag_01]>$unw_vflg01_sww[flag_nama_01]</option>";	
+						}}
+			  ?>
             </select>
             </td>
           </tr>
           <tr>
             <td colspan="2">
-            <!--
-            Rule Querying Kelas<br>
-            	<textarea class="form-control" name="rule" readonly required>kode_kelas='REG' OR kode_kelas='EKS'</textarea>  <br />
-                <span class="badge badge-primary">COntoh penggunaan RUle</span>
-                <blockquote>kode_kelas='[kode_kelas]' OR kode_kelas='[kode_kelas]'</blockquote>
-           	  </td>
-            <td>
-            -->
-            <!--
-              Rule Querying UTS UAS<br>
-            	<textarea class="form-control" name="rule02" readonly required>uas='2' AND uts='1'</textarea>  <br />
-                <span class="badge badge-primary">COntoh penggunaan RUle</span>
-             	 uas='2' AND uts='1'
-                 -->
+            <select name="tipe_spp"  class="formn-control form-control-sm" required>
+               <option value="">Tipe Pembayaran SPP</option>
+              <?PHP
+			  		$unw_vflg01_sw02 = $call_q("$call_sel tb_flag_01 WHERE flag_tipe_01='SPP'");
+						while($unw_vflg01_sww02 = $call_fas($unw_vflg01_sw02)){
+						echo"<option value=$unw_vflg01_sww02[idmain_flag_01]>$unw_vflg01_sww02[flag_nama_01]</option>";	
+						}
+			  ?>
             </td>
             <td><textarea name="ket" class="form-control"></textarea></td>
+            <td>-</td>
            
           </tr>
 	</table>

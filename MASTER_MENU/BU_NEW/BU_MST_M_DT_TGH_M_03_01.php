@@ -35,7 +35,7 @@
 					$vtajar01_sw02  = $call_q("$call_sel tahun_ajaran WHERE idtahun_ajaran='$IDAJR01'");
 						$vtajar01_sww02 = $call_fas($vtajar01_sw02);
 				//..TAGIHAN..//
-				$vtgh01_sw02 = $call_q("$sl idmain_tagihan_01,rule,rule_02,masa_biaya,kode_urut FROM tb_tagihan_01 WHERE idmain_jenis_tagihan='$IDJTGH01' AND idtahun_ajaran='$vtajar01_sww02[idtahun_ajaran]' AND idkejuruan='$IDKEJ01'");
+				$vtgh01_sw02 = $call_q("$sl idmain_tagihan_01,idmain_jenis_tagihan,rule,rule_02,masa_biaya,kode_urut,tipe FROM tb_tagihan_01 WHERE idmain_jenis_tagihan='$IDJTGH01' AND idtahun_ajaran='$vtajar01_sww02[idtahun_ajaran]' AND idkejuruan='$IDKEJ01'");
 					$vtgh01_sww02 = $call_fas($vtgh01_sw02);
 				//* //
 					$kode_urut = "$vtgh01_sww02[kode_urut]$vjtgh_sww02[nama]";

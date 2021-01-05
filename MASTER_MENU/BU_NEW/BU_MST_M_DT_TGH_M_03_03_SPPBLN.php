@@ -11,12 +11,12 @@
     <?PHP
 			//KONVERSI KONDISI
 			if($vtgh01_sww02['idmain_jenis_tagihan']=="226577253200715104233"){ ?>
-					<a class="btn btn-outline-success btn-sm" href="<?php echo"?HLM=BU_MST_M&SUB=BU_MST_M_DT_TGH_M&SUB_CHILD=BU_MST_M_DT_TGH_M_03_01&SUB_CHILD_02=BU_MST_M_DT_TGH_M_03_03_SPPBLN&IDKEJ01=$IDKEJ01&IDJTGH01=$IDJTGH01&IDAJR01=$IDAJR01"; ?>">#SPP BULANAN</a>
+					<a class="btn btn-outline-success btn-sm" href="<?php echo"?HLM=BU_MST_M&SUB=BU_MST_M_DT_TGH_M&SUB_CHILD=BU_MST_M_DT_TGH_M_03_01&SUB_CHILD_02=BU_MST_M_DT_TGH_M_03_03&IDKEJ01=$IDKEJ01&IDJTGH01=$IDJTGH01&IDAJR01=$IDAJR01"; ?>">#SPP SEMESTER</a>
 			<?PHP }else{ ?>
             
             <?PHP }//CLOSE KONVERSI KONDISI SPPBLN ?>
     <br /><br />
-    	<span class="badge badge-danger">#Entri Tagihan Baru</span>
+    	<span class="badge badge-danger">#Entri Tagihan SPP BULANAN</span>
     <br />
     <form method="post">
      <div style="overflow:auto;width:auto;height:360px;padding:10px;border:1px solid #eee">
@@ -40,7 +40,7 @@
 			
 			while($vmhs01_sww = $call_fas($vmhs01_sw)){
 			//..TGH..//
-				$vtgh01_sw = $call_q("$sl idmain_tagihan_01,idmain_jenis_tagihan,idgelombang,idtahun_ajaran,idkejuruan,kode,kode_urut,kode_kelas,nominal FROM tb_tagihan_01 WHERE idmain_jenis_tagihan='$IDJTGH01' AND idtahun_ajaran='$IDAJR01' AND idkejuruan='$IDKEJ01' AND idgelombang='$vmhs01_sww[idgelombang]' AND kode_kelas='$vmhs01_sww[kode_kelas]'");	
+				$vtgh01_sw = $call_q("$sl idmain_tagihan_01,idmain_jenis_tagihan,idgelombang,idtahun_ajaran,idkejuruan,kode,kode_urut,kode_kelas,nominal FROM tb_tagihan_01 WHERE idmain_jenis_tagihan='$IDJTGH01' AND idtahun_ajaran='$IDAJR01' AND idkejuruan='$IDKEJ01' AND idgelombang='$vmhs01_sww[idgelombang]' AND kode_kelas='$vmhs01_sww[kode_kelas]' AND tipe='SPPBLN'");	
    					$vtgh01_sww = $call_fas($vtgh01_sw);
 			//..GELOMBANG..//
 			$vgl01_sw = $call_q("$sl idgelombang,gelombang FROM gelombang WHERE idgelombang='$vmhs01_sww[idgelombang]'");
@@ -90,17 +90,9 @@
                     <span class="input-group-text" id="basic-addon1"><?php echo"$vgl01_sww[gelombang]"; ?></span>
                   </div>
                  <!-- -->
-                 <?php 
-				 	if($vtgh01_sww['idmain_jenis_tagihan']=="-929993198191023060710"){
-						//Jumlah SKS mahasiswa KRS
-						$vkrs01_sw = $call_q("$sl SUM(jumlah) as jmlkrs01  FROM krs WHERE idmahasiswa='$vmhs01_sww[idmahasiswa]' AND idsemester='$vmhs01_sww[idsemester]'");
-							$cn_vkrs01_sw = $call_fas($vkrs01_sw);
-						//Counting data sks
-							$hit_vkrs01_sw = $cn_vkrs01_sw['jmlkrs01'] * $vtgh01_sww['nominal'];
-				 ?>
-                 		<input type="text" class="form-control form-control-sm" name="<?php echo"tgh_nom$no_mhs"; ?>" value="<?php echo"$hit_vkrs01_sw"; ?>">
+               
                  <?PHP
-					}elseif($vtgh01_sww['idmain_jenis_tagihan']=="226577253200715104233"){
+					if($vtgh01_sww['idmain_jenis_tagihan']=="226577253200715104233"){
 						/*konversi Kondisi */
 							$hit_vtgh01_sw = $vtgh01_sww['nominal'] / (20/100);
 							if($vmhs01_sww['mhs']=="3"){
@@ -112,13 +104,8 @@
                         
                        		 <input type="text" class="form-control form-control-sm" name="<?php echo"tgh_nom$no_mhs"; ?>" value="<?php echo"$vtgh01_sww[nominal]"; ?>">
     	                    <?PHP /*konversi Kondisi */ } ?>
-                		 			
-				<?php }else{ ?>
-							
-                 			 <input type="text" class="form-control form-control-sm" name="<?php echo"tgh_nom$no_mhs"; ?>" value="<?php echo"$vtgh01_sww[nominal]"; ?>">
-                        
-						<?php } ?>
-                <!-- -->
+                  <?PHP } ?>
+             
             </div>
             
             </td>

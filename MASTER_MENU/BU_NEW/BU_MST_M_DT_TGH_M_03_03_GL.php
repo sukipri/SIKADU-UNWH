@@ -25,7 +25,7 @@
    <?php 
    		
    	$no_mhs = 1;
-  		$vmhs01_sw = $call_q("$sl idmahasiswa,idgelombang,idkejuruan,idtahun_ajaran,idsemester,nama,mhs,uts,uas,kode_kelas FROM mahasiswa WHERE   mhs='2'  AND krs='2'  order by idmahasiswa asc ");
+  		$vmhs01_sw = $call_q("$sl idmahasiswa,idgelombang,idkejuruan,idtahun_ajaran,idsemester,nama,mhs,uts,uas,kode_kelas FROM mahasiswa WHERE   (mhs='2' OR mhs='3')  AND krs='2' AND idkejuruan='$IDKEJ01'  order by idmahasiswa asc ");
    			$jum_vmhs01_sw = $call_nr($vmhs01_sw);
 			
 			while($vmhs01_sww = $call_fas($vmhs01_sw)){
@@ -45,9 +45,10 @@
                 <?php echo"<b>$vmhs01_sww[kode_kelas]</b>"; ?>
             </td>
             <td width="12">
-            <?php if($vmhs01_sww['mhs']=='2'){ ?>
+             <?php if($vmhs01_sww['mhs']=='2'){ ?>
            		<span class="badge badge-success">Aktif</span>
-            
+            <?PHP }elseif($vmhs01_sww['mhs']=='3'){ ?>
+           		 <span class="badge badge-info">Cuti</span>
             <?php } ?>
             </td>
             <td width="12%">
@@ -88,7 +89,18 @@
 							$hit_vkrs01_sw = $cn_vkrs01_sw['jmlkrs01'] * $vtgh01_sww['nominal'];
 				 ?>
                  		<input type="text" class="form-control form-control-sm" name="<?php echo"tgh_nom$no_mhs"; ?>" value="<?php echo"$hit_vkrs01_sw"; ?>">
-                 		
+                 		 <?PHP
+					}elseif($vtgh01_sww['idmain_jenis_tagihan']=="226577253200715104233"){
+						/*konversi Kondisi */
+							$hit_vtgh01_sw = $vtgh01_sww['nominal'] / (20/100);
+							if($vmhs01_sww['mhs']=="3"){
+								
+				?>
+                		 <input type="text" class="form-control form-control-sm" name="<?php echo"tgh_nom$no_mhs"; ?>" value="<?php echo"$hit_vtgh01_sw"; ?>">
+	                		<?PHP /* konversi Kondisi */  }else{ ?>
+                        
+                       		 <input type="text" class="form-control form-control-sm" name="<?php echo"tgh_nom$no_mhs"; ?>" value="<?php echo"$vtgh01_sww[nominal]"; ?>">
+    	                    <?PHP /*konversi Kondisi */ } ?>
 						<?php }else{ ?>
 							
                  			 <input type="text" class="form-control form-control-sm" name="<?php echo"tgh_nom$no_mhs"; ?>" value="<?php echo"$vtgh01_sww[nominal]"; ?>">
